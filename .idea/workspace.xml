@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6b98c7c-74f8-4227-8577-ca28c590a2b3" name="Changes" comment="Structure">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCases/TC001_RegisterUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/MainPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/RegisterPage.java" afterDir="false" />
-    </list>
+    <list default="true" id="b6b98c7c-74f8-4227-8577-ca28c590a2b3" name="Changes" comment="Register Page Test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.TC001_RegisterUserTest.TC001.executor": "Run",
+    "TestNG.TC001_RegisterUserTest.TC001.executor": "Debug",
     "TestNG.TC001_RegisterUserTest.executor": "Run",
     "TestNG.TC002_RegisterFormTest.executor": "Run",
     "git-widget-placeholder": "main",
@@ -132,11 +123,20 @@
       <option name="project" value="LOCAL" />
       <updated>1763925180262</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Register Page Test">
+      <option name="closed" value="true" />
+      <created>1764003032078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764003032078</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Structure" />
+    <MESSAGE value="Register Page Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register Page Test" />
   </component>
 </project>
