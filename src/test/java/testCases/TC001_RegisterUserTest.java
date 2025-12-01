@@ -2,8 +2,10 @@ package testCases;
 
 import Pages.HomePage;
 import Pages.RegisterPage;
+import Pages.RegisterSuccessPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -33,17 +35,21 @@ public class TC001_RegisterUserTest {
             registerPage.setFirstName("Navini");
             registerPage.setLastName("Rubasinghe");
             registerPage.setPhone("0705044967");
-            registerPage.setEmail("navinimanmini2002@gmail.com");
+            registerPage.setEmail("navinimanmini123@gmail.com");
             registerPage.setAddress("Matar,Southern Province,Sri Lanka");
             registerPage.setCity("Matara");
             registerPage.setProvince("Sothern Province");
             registerPage.setPostalCode("81000");
-            registerPage.setCountry();
-            registerPage.setUsername("mngr647450");
-            registerPage.setPassword("emytuze");
-            registerPage.setConfirmPassword("emytuze");
+            registerPage.selectCountry("AUSTRIA");
+            registerPage.setUsername("mngr647933");
+            registerPage.setPassword("qAhYbYn");
+            registerPage.setConfirmPassword("qAhYbYn");
 
-            registerPage.submit();
+            registerPage.clickSubmit();
+
+        RegisterSuccessPage registerSuccessPage = new RegisterSuccessPage(driver);
+        String actualText = registerSuccessPage.successfulLoginCheck();
+        Assert.assertTrue(actualText.contains("Dear"),"Registration Failed");
 
     }
 }

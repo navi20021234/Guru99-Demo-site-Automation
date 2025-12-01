@@ -9,7 +9,6 @@ public class RegisterPage {
     WebDriver driver;
 
     public RegisterPage(WebDriver driver){
-
         this.driver = driver;
     }
 
@@ -17,7 +16,7 @@ public class RegisterPage {
     By lastName_locator = By.xpath("//input[@name='lastName']");
     By phone_locator  = By.xpath("//input[@name='phone']");
     By email_locator = By.xpath("//input[@id='userName']");
-    By address_locator = By.xpath("//input[@id='userName']");
+    By address_locator = By.xpath("//input[@name='address1']");
     By city_locator = By.xpath("//input[@name='city']");
     By province_locator = By.xpath("//input[@name='state']");
     By postalCode_locator = By.xpath("//input[@name='postalCode']");
@@ -28,20 +27,20 @@ public class RegisterPage {
     By confirmPassword_locator = By.xpath("//input[@name='confirmPassword']");
     By submitBtn_locator = By.xpath("//input[@name='submit']");
 
-    public void setFirstName(String name1){
-        driver.findElement(firstName_locator).sendKeys(name1);
+    public void setFirstName(String name){
+        driver.findElement(firstName_locator).sendKeys(name);
     }
 
-    public void setLastName(String name2){
-        driver.findElement(lastName_locator).sendKeys(name2);
+    public void setLastName(String name){
+        driver.findElement(lastName_locator).sendKeys(name);
     }
 
     public void setPhone(String phone){
         driver.findElement(phone_locator).sendKeys(phone);
     }
 
-    public void setEmail(String mail){
-        driver.findElement(email_locator).sendKeys(mail);
+    public void setEmail(String email){
+        driver.findElement(email_locator).sendKeys(email);
     }
 
     public void setAddress(String address){
@@ -60,10 +59,11 @@ public class RegisterPage {
         driver.findElement(postalCode_locator).sendKeys(postalCode);
     }
 
-    public void setCountry(){
-        WebElement selctCountey = driver.findElement(country_locator);
-        Select select = new Select(selctCountey);
-        select.selectByIndex(4);
+    // FIXED: Added country as a parameter
+    public void selectCountry(String countryName){
+        WebElement countryDropdown = driver.findElement(country_locator);
+        Select select = new Select(countryDropdown);
+        select.selectByVisibleText(countryName);
     }
 
     public void setUsername(String userName){
@@ -74,13 +74,11 @@ public class RegisterPage {
         driver.findElement(password_locator).sendKeys(password);
     }
 
-    public void setConfirmPassword(String confirm){
-        driver.findElement(confirmPassword_locator).sendKeys(confirm);
+    public void setConfirmPassword(String confirmPassword){
+        driver.findElement(confirmPassword_locator).sendKeys(confirmPassword);
     }
 
-    public  void submit(){
-        driver.findElement(submitBtn_locator).click();
+    public void clickSubmit(){
+        driver.findElement(submitBtn_locator).submit();
     }
-
-
 }
